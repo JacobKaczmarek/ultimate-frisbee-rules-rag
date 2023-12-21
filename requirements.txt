@@ -1,0 +1,14 @@
+openai==0.28
+langchain
+pypdf
+tiktoken
+pinecone-client
+python-dotenv
+langchainhub
+unstructured[pdf]
+pyyaml
+setuptools
+python-box==6.0.2
+ensure==1.0.2
+streamlit
+-e .
