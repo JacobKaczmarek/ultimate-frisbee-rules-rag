@@ -1,0 +1,6 @@
+initialise_vectorstore:
+  documents_dir: documents
+  index_name: ultimate-frisbee-rules
+
+query_rag:
+  index_name: ultimate-frisbee-rules
