@@ -29,11 +29,13 @@ class VectorStore:
         self.splits = text_splitter.split_documents(documents)
 
 
-    def _create_index(self) -> None:
+    def _load_or_create_index(self) -> None:
         pinecone.init(
             api_key=os.environ['PINECONE_API_KEY'],
             environment=os.environ['PINECONE_ENV'],
         )
-        
+
         embeddings = OpenAIEmbeddings()
-        Pinecone.from_documents(documents=self.splits, index_name=self.config.index_name, embedding=embeddings)
+
+        if self.config.index_name not in pinecone.list_indexes():
+            Pinecone.from_documents(documents=self.splits, index_name=self.config.index_name, embedding=embeddings)
