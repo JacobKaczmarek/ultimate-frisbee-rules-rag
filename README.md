@@ -15,3 +15,6 @@ streamlit run app.py
 ```
 
 After these commands were ran successfully the web interface should be available at <http://localhost:8501>
+
+## Deployed version
+To test this app visit <https://ultimate-frisbee-rules-rag.streamlit.app/>
